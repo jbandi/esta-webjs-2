@@ -1,14 +1,39 @@
-.comp_header {
-  $headerHeight: 3.733em;
-  $logoHeight: 1.5em;
-  $headerPadding: 0.2em;
+@import '../../../../node_modules/bootstrap/scss/variables';
+@import '../../../../node_modules/esta-webjs-extensions/src/styles/app-variables';
+@import '../../../../node_modules/esta-webjs-extensions/src/styles/sbb-colors';
 
+.comp_header {
   height: $headerHeight;
-  padding: $headerPadding $headerHeight;
+}
+
+nav {
+  height: $headerHeight;
+  background-color: $sbb-white;
+  border-bottom: 1px solid $sbb-black-10;
+
+  .nav-link {
+    cursor: pointer;
+    font-size: 1.1em;
+    color: $sbb-black-90;
+
+    &.active {
+      padding-bottom: -1em !important;
+      height: 100%;
+      border-bottom: 1px solid $sbb-black-90;
+    }
+  }
+
+  .navbar-brand {
+    margin-left: $navbar-padding-x;
+    margin-right: 0;
+  }
+
   .logo {
-    height: $logoHeight;
-    width: 13em;
+    width: 10em;
     float: right;
-    margin-top: ($headerHeight - $logoHeight) / 2 - $headerPadding;
+  }
+
+  .navbar-collapse {
+    background-color: $sbb-white;
   }
 }

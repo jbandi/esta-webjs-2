@@ -1,7 +1,1 @@
-/* Obacht: Die Reihenfolge der Imports ist relevant und darf nicht geändert werden. */
-@import 'style/sbb-fonts';
-@import 'style/sbb-colors';
-@import 'style/app-variables';
-@import 'style/app-style';
-@import 'style/app-temp';
-@import 'style/app-overrides';
+@import '../node_modules/esta-webjs-extensions/src/styles/esta-extension-styles.scss';

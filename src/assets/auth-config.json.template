@@ -1,0 +1,8 @@
+{
+  "realm": "FILLME",
+  "auth-server-url": "FILLME",
+  "ssl-required": "external",
+  "resource": "FILLME",
+  "public-client": true,
+  "use-resource-role-mappings": true
+}

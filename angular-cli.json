@@ -19,15 +19,13 @@
       "testTsconfig": "tsconfig.spec.json",
       "prefix": "app",
       "styles": [
+        "../node_modules/bootstrap/scss/bootstrap.scss",
         "../node_modules/font-awesome/scss/font-awesome.scss",
         "../node_modules/primeng/resources/primeng.css",
         "../node_modules/primeng/resources/themes/omega/theme.scss",
         "styles.scss"
       ],
-      "scripts": [
-        "../node_modules/jquery/dist/jquery.slim.js",
-        "scripts/collapse.js"
-      ],
+      "scripts": [],
       "environmentSource": "environments/environment.ts",
       "environments": {
         "dev": "environments/environment.ts",
@@ -57,7 +55,7 @@
     }
   },
   "defaults": {
-    "styleExt": "css",
+    "styleExt": "scss",
     "component": {
       "spec": false,
       "inlineStyle": true,

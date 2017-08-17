@@ -1,3 +1,4 @@
+import {HttpClient, HttpClientModule} from '@angular/common/http';
 /**
  * Copyright (C) Schweizerische Bundesbahnen SBB, 2017.
  *
@@ -8,7 +9,6 @@
  * @since 10.05.2017, 2017.
  */
 import {NgModule} from '@angular/core';
-import {Http} from '@angular/http';
 import {BrowserModule} from '@angular/platform-browser';
 import {TranslateLoader, TranslateModule} from '@ngx-translate/core';
 import {TranslateHttpLoader} from '@ngx-translate/http-loader';
@@ -19,26 +19,27 @@ import {CoreModule} from './core/core.module';
 import {ExampleModule} from './example/example.module';
 
 // AoT requires an exported function for factories
-export function HttpLoaderFactory(http: Http) {
-    return new TranslateHttpLoader(http);
+export function HttpLoaderFactory(http: HttpClient) {
+  return new TranslateHttpLoader(http);
 }
 
 @NgModule({
-    declarations: [AppComponent],
-    imports: [
-        BrowserModule,
-        CoreModule,
-        ExampleModule,
-        TranslateModule.forRoot({
-            loader: {
-                provide: TranslateLoader,
-                useFactory: HttpLoaderFactory,
-                deps: [Http]
-            }
-        }),
-        routing
-    ],
-    bootstrap: [AppComponent]
+  declarations: [AppComponent],
+  imports: [
+    BrowserModule,
+    CoreModule,
+    ExampleModule,
+    HttpClientModule,
+    TranslateModule.forRoot({
+      loader: {
+        provide: TranslateLoader,
+        useFactory: HttpLoaderFactory,
+        deps: [HttpClient]
+      }
+    }),
+    routing
+  ],
+  bootstrap: [AppComponent]
 })
 export class AppModule {
 }
