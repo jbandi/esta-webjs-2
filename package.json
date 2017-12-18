@@ -7,7 +7,7 @@
   "scripts": {
     "ng": "ng",
     "clean": "rimraf dist reports",
-    "start": "ng serve -o",
+    "start": "ng serve -o --aot",
     "lint": "ng lint --type-check",
     "test": "ng test --watch=false",
     "test-selenium": "ng test --progress=false --watch=false --browsers=SeleniumCH,SeleniumFF --code-coverage",
