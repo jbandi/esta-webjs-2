@@ -1,4 +1,3 @@
-import {HttpEvent, HttpHandler, HttpInterceptor, HttpRequest} from '@angular/common/http';
 /**
  * Copyright (C) Schweizerische Bundesbahnen SBB, 2017.
  *
@@ -11,6 +10,7 @@ import {HttpEvent, HttpHandler, HttpInterceptor, HttpRequest} from '@angular/com
 import {Injectable} from '@angular/core';
 import {AuthService} from 'esta-webjs-extensions';
 import {Observable} from 'rxjs/Observable';
+import {HttpEvent, HttpHandler, HttpInterceptor, HttpRequest} from '@angular/common/http';
 
 @Injectable()
 export class TokenAppendInterceptor implements HttpInterceptor {

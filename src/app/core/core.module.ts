@@ -17,6 +17,7 @@ import {AUTH_INTERCEPTOR, AuthModule} from 'esta-webjs-extensions';
 import {HttpClient, HttpClientModule} from '@angular/common/http';
 import {TranslateModule, TranslateLoader} from '@ngx-translate/core';
 import {TranslateHttpLoader} from '@ngx-translate/http-loader';
+import {environment} from '../../environments/environment';
 
 // AOT requires an exported function for factories
 export function HttpLoaderFactory(http: HttpClient) {
@@ -27,7 +28,7 @@ export function HttpLoaderFactory(http: HttpClient) {
     imports: [
         CommonModule,
         RouterModule,
-        AuthModule,
+        AuthModule.forRoot(environment.authConfig),
         HttpClientModule,
         TranslateModule.forRoot({
             loader: {

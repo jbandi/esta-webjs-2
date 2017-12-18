@@ -14,14 +14,11 @@ import {AppComponent} from './app.component';
 import {routing} from './app.routes';
 import {CoreModule} from './core/core.module';
 import {ExampleModule} from './example/example.module';
-import {AuthModule} from 'esta-webjs-extensions';
-import {environment} from '../environments/environment';
 
 @NgModule({
     declarations: [AppComponent],
     imports: [
         BrowserModule,
-        AuthModule.forRoot(environment.authConfig),
         CoreModule,
         ExampleModule,
         routing
