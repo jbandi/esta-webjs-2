@@ -13,6 +13,7 @@
     "test-selenium": "ng test --progress=false --watch=false --browsers=SeleniumCH,SeleniumFF --code-coverage",
     "e2e": "ng e2e",
     "e2e-selenium": "ng e2e --progress=false --host=0.0.0.0 --disableHostCheck=true --port=$(echo $externalport) --public-host=$(echo $host):$(echo $externalport) --config=protractor.webgrid.conf.js",
+    "analyze-bundle": "ng build --prod --stats-json && webpack-bundle-analyzer dist/stats.json",
     "build-prod-local": "ng build --prod",
     "build-prod-ci": "ng build --prod --progress=false"
   },
@@ -64,7 +65,8 @@
     "rimraf": "^2.6.2",
     "ts-node": "=3.2.2",
     "tslint": "=5.7.0",
-    "typescript": "=2.4.2"
+    "typescript": "=2.4.2",
+    "webpack-bundle-analyzer": "^2.9.1"
   },
   "keywords": [
     "esta-webjs-starterkit",
